@@ -1,0 +1,12 @@
+#!/bin/bash -e
+#
+# S2I assemble script for the 'spa-runner' image.
+# The 'assemble' script builds your application source so that it is ready to run.
+#
+# For more information refer to the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+#
+
+# If the 'spa-runner' assemble script is executed with the '-h' flag, print the usage.
+echo "Nothing to do here"
+# TODO: Add build steps for your application, eg npm install, bundle install, pip install, etc.
