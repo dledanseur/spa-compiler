@@ -27,13 +27,13 @@ RUN microdnf -y module enable nodejs:20 && microdnf -y install nodejs tar
 
 COPY ./s2i/bin/ /usr/libexec/s2i
 
-RUN chmod +x /usr/libexec/s2i/*
+RUN chown -R 1001:0 /usr/libexec/s2i && chmod +x /usr/libexec/s2i/*
 
 
 # TODO: Drop the root user and make the content of /opt/app-root owned by user 1001
 # RUN chown -R 1001:1001 /opt/app-root
 
-RUN mkdir /app
+RUN mkdir /app && chown -R 1001:0 /app
 
 WORKDIR /app
 
